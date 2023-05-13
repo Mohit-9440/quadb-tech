@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import './bookingform.css'
 function BookingForm(props) {
@@ -8,8 +8,10 @@ function BookingForm(props) {
   const [phone, setPhone] = useState('')
   const [errorMessage, setErrorMessage] = useState('');
 
-  const location = useLocation();
-  const movieName = location.state?.movieName;
+//   const location = useLocation();
+  const params = useParams();
+//   console.log(params)
+//   const movieName = location.state?.movieName;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,7 +20,7 @@ function BookingForm(props) {
         return;
     }
     const bookingData = {
-      movieName,
+      movieName: params.name,
       name,
       email,
       phone,
@@ -33,7 +35,7 @@ function BookingForm(props) {
   return (
     <div className='booking-form-container'>
       <h1>Booking Form</h1>
-      <p>Movie: {props.movieName}</p>
+      <p className='booking-movie-name'>Movie: <span>{params.name}</span></p>
       <form className='form-group' onSubmit={handleSubmit}>
         <label>
           Name:

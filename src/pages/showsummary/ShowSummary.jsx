@@ -27,7 +27,7 @@ function ShowSummary() {
                     <img src={show.image?.original} alt={show.name} />
                     <p className='show-summary' dangerouslySetInnerHTML={{__html: show.summary}}></p>
                     <Link to={{
-                        pathname: '/booking-form',
+                        pathname: `/booking-form/${show.name}`,
                         state: { movieName: show.name }
                         }}>
                         <button className='book-ticket'>Book a Ticket</button>
