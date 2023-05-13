@@ -6,6 +6,7 @@
     justify-content: center;
 }
 .summary-card{
+    margin-top: 20px;
     width: 400px;
     height: auto;
     display: flex;
@@ -51,7 +52,6 @@
 }
 @media(max-width: 480px) {
     .summary-card{
-        margin-top: 20px;
       height:auto;
       width: 250px;
     }
