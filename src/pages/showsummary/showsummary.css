@@ -49,3 +49,14 @@
 .book-ticket:hover {
   background-color: #0062cc;
 }
+@media(max-width: 480px) {
+    .summary-card{
+        margin-top: 20px;
+      height:auto;
+      width: 250px;
+    }
+    .summary-card img{
+      height: 300px;
+      width: 250px;
+    }
+  }

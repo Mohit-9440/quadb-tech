@@ -78,3 +78,13 @@
   .show-info:hover {
     background-color: #0062cc;
   }
+
+  @media(max-width: 480px) {
+    .list-li{
+      height: 600px;
+    }
+    .show-image{
+      height: 300px;
+      width: 250px;
+    }
+  }
