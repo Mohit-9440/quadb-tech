@@ -38,16 +38,13 @@ function BookingForm(props) {
       <p className='booking-movie-name'>Movie: <span>{params.name}</span></p>
       <form className='form-group' onSubmit={handleSubmit}>
         <label>
-          Name:
-          <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+          <input type="text" value={name} placeholder='Name' onChange={(e) => setName(e.target.value)} />
         </label>
         <label>
-          Email:
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          <input type="email" value={email} placeholder='Email' onChange={(e) => setEmail(e.target.value)} />
         </label>
         <label>
-          Phone:
-          <input type="number" value={phone} onChange={(e) => setPhone(e.target.value)} />
+          <input type="number" value={phone} placeholder='Phone' onChange={(e) => setPhone(e.target.value)} />
         </label>
         {errorMessage && <p className="error-message">{errorMessage}</p>}
         <button className='submit-button' type="submit">Submit</button>

@@ -23,8 +23,9 @@
 }
 
 .form-group label {
+  width: 100%;
   font-size: 18px;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 
 .form-group input {
@@ -52,4 +53,7 @@
 
 .submit-button:hover {
   background-color: #0069d9;
+}
+.error-message{
+    color: red;
 }
